@@ -1,0 +1,79 @@
+html,body{
+	padding: 0;
+	margin:0;
+}
+
+.body{
+	
+}
+
+.header{
+	text-align: center;
+	width: 70vw;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.text-header{
+	text-align: center;
+	font-size: 42px;
+	padding: 10px;
+	margin:0;
+}
+
+.inp-name,.inp-sName,.inp-email{
+	max-width: 150px;
+	height: 35px;
+}
+
+.btn{
+	min-width: 110px;
+	text-align: center;
+	display: inline-block;
+	background: #1eb310;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background: #14730b;
+}
+
+.btn:active{
+	background:#11610a;
+}
+
+.table{
+	min-width: 720px;
+	max-width: 920px;
+	margin: 0 auto;
+}
+
+.delete-btn{
+	cursor: pointer;
+	min-width: 50px;
+	text-align: center;
+	display: inline-block;
+	background: #d90202;
+	color: #000;
+	text-decoration: none;
+	border:none;
+	min-height: 25px;
+}
+
+.delete-btn:hover{
+	background: #a30202;
+}
+
+.delete-btn:active{
+	background: #780202;
+}
+
+.tr{
+	padding: 0;
+	margin: 0;
+}

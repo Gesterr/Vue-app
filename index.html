@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Добавление</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class='header'>
+		<h3 class="text-header">Добавить имя</h3>
+		<input placeholder="Имя" v-model="name" type="text" class="inp-name" maxlength="24">
+		<input placeholder="Фамилия" v-model="secondName" type="text" class="inp-sName" maxlength="24">
+		<input placeholder="Email" v-model="email" type="text" class='inp-email' maxlength="50">
+		<button v-on:click="addName()" class="btn">Добавить</button>
+		</div>
+
+		<table border="1" style="list-style-type: none; text-align: center;" class="table">
+				<tr><th>ID</th><th><label><input v-model="sortActive" type="checkbox">Имена</label></th><th>Фамилии</th><th>E-mail</th></tr>
+				<template v-for="(nams,i) in (sortActive ? sortedUsers : names)"><!-- Требуется чтобы всем классам передать значения v-for, Так же это сортировка по именам -->
+				<tr class='tr'>		
+						<td>
+						<li><!-- ID -->
+							{{i+1}}
+						</li>
+						</td>
+						<td>
+							<!-- Данный столбик отвечает за имена -->
+						<li class="names">
+							{{nams.namess}}
+						</li>
+						</td>
+						<td>
+							<!-- Данный столбик отвечает за Фамилии -->
+						<li class="sNames">
+							{{nams.secondNames}}
+						</li>
+						</td>
+						<td>
+							<!-- Данный столбик отвечает за Emails -->
+						<li class="Emails">
+							{{nams.emails}}
+						</li>
+						</td>
+						<td style="width: 40px">
+							<!-- Данный столбик отвечает за Кнопки на удаление -->
+							<button @click="deleteName(i)" class="delete-btn">X</button>
+						</td>
+				</tr>
+				</template>
+		</table>
+	</div>
+	<script src="sript.js"></script>
+</body>
+</html>
